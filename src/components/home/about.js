@@ -6,20 +6,20 @@ const items = [
   {
     key: '1',
     icon: <i className="fas fa-chart-pie"></i>,
-    title: 'High Performance',
-    content: 'Elevate your game with high-performance technology. Enjoy seamless, efficient and powerful experiences.',
+    title: 'Raspberry Pi',
+    content: "Ordinateur monocarte polyvalent pour exécuter un système d'exploitation et interagir avec des périphériques.",
   },
   {
     key: '2',
     icon: <i className="fas fa-desktop"></i>,
-    title: 'Flat Design',
-    content: 'Simplify your aesthetic with flat design. Clean, modern, and minimal design elements for a fresh look.',
+    title: 'Capteurs et actionneurs',
+    content: "Instruments pour percevoir et interagir avec l'environnement, comme des caméras, des capteurs de distance et des moteurs.",
   },
   {
     key: '3',
     icon: <i className="fas fa-database"></i>,
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    title: 'MQTT et logiciels',
+    content: "intégration de bibliothèques MQTT pour la communication, ainsi que l'utilisation de WebSocket pour des communications en temps réel.",
   },
 ]
 
@@ -28,10 +28,10 @@ function AppAbout() {
     <div id="about" className="block aboutBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>About Us</h2>
+          <h2>Contexte du Projet </h2>
         </div>
         <div className="contentHolder">
-          <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, improve efficiency, and make our lives easier. From artificial intelligence to cloud computing, the rapid advancements in technology are changing the way we interact with the world around us. As we continue to push the boundaries of what is possible, we can expect new and exciting developments that will further shape the future of our world. Whether it's in healthcare, education, or any other industry, technology has the power to make a positive impact and create a better future for all of us. </p>
+          <p>Nous sommes Riadh Halila et Jamel Benkhalifa, étudiants en licence Réseaux et IoT à l'Université Virtuelle de Tunis. Bien que nous venions de disciplines diversifiées, Riadh en gestion financière et Jamel en technologie de l'information, nous avons collaboré pour développer un "Robot Superviseur" pour notre projet de fin d'études. Ce projet innovant intègre les technologies de l'IoT et de la robotique pour créer un système capable de surveiller divers environnements.<br/> Notre objectif est de démontrer comment ces avancées technologiques peuvent améliorer la surveillance, l'efficacité opérationnelle et la sécurité. </p>
         </div>
         <Row gutter={[16, 16]}>   
           {items.map(item => {
@@ -48,9 +48,9 @@ function AppAbout() {
             );
           })}
         </Row>
-        <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, improve efficiency, and make our lives easier. From artificial intelligence to cloud computing, the rapid advancements in technology are changing the way we interact with the world around us. As we continue to push the boundaries of what is possible, we can expect new and exciting developments that will further shape the future of our world. Whether it's in healthcare, education, or any other industry, technology has the power to make a positive impact and create a better future for all of us. </p>
-        <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, improve efficiency, and make our lives easier. From artificial intelligence to cloud computing, the rapid advancements in technology are changing the way we interact with the world around us. As we continue to push the boundaries of what is possible, we can expect new and exciting developments that will further shape the future of our world. Whether it's in healthcare, education, or any other industry, technology has the power to make a positive impact and create a better future for all of us. </p>
-        <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, improve efficiency, and make our lives easier. From artificial intelligence to cloud computing, the rapid advancements in technology are changing the way we interact with the world around us. As we continue to push the boundaries of what is possible, we can expect new and exciting developments that will further shape the future of our world. Whether it's in healthcare, education, or any other industry, technology has the power to make a positive impact and create a better future for all of us. </p>
+        <p> <b>Architecture Matérielle : Assemblage et Composants du Robot</b> :<br/> La partie hardware du projet se concentre sur l'assemblage et l'intégration des composants physiques du robot. Le processus d'assemblage comprend le montage du kit robot, l'installation des servomoteurs pour le mouvement, l'intégration de capteurs ultrason pour la détection d'obstacles, ainsi que l'ajout de roues et de batteries pour l'alimentation. Cette phase de développement matériel vise à créer une plateforme physique stable et fonctionnelle pour le contrôle du robot.</p>
+        <p><b>Développement Logiciel : Site Web et Intégration des Technologies</b> :<br/> La partie software de ce projet repose sur le développement d'un site web interactif pour le contrôle du robot à distance. Le site web est construit en utilisant des technologies modernes telles que React pour l'interface utilisateur, HTML, CSS et JavaScript pour la présentation et l'interaction, ainsi que Python pour la gestion des fonctionnalités côté serveur. Le code d'exécution Python est spécialement conçu pour interagir avec les composants matériels du robot, recevoir et traiter les commandes de contrôle, et assurer la connectivité avec le protocole MQTT. </p>
+        <p><b>Connectivité Sécurisée: Protocole MQTT avec WebSockets</b> :<br/>La connectivité entre le site web et les robots est établie grâce à une combinaison du protocole MQTT et des WebSockets. MQTT assure une communication légère et efficace entre le site web et les robots, tandis que les WebSockets permettent une connexion bidirectionnelle en temps réel pour une interaction fluide. Cette approche garantit une connectivité sécurisée et fiable, tout en offrant la possibilité de contrôler les robots à distance de manière réactive et instantanée. </p>
       </div>
     </div>
   );

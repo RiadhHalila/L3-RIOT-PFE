@@ -1,7 +1,4 @@
-/* 
-general 
--------
-*/
+
 body {
   font-size: 16px;
   line-height: 1.6;
@@ -190,12 +187,15 @@ hero
 ---- 
 */
 .heroBlock {
-  background: url('assets/images/bg-hero.jpg') no-repeat;
-  background-position: 50% 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+              url('assets/images/bg-hero.jpg') no-repeat;
+  background-position: 50% 60%;
   background-size: cover;
-  height: 100vh;
+  height: 100vh; 
 }
 
+
+/* ----------------------------------------------------------------*/
 .heroBlock .container-fluid {
   display: block !important;
 }
@@ -442,4 +442,12 @@ responsive
     display: none;
   }
 }
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Set the desired height */
+  object-fit: cover;
+}
+
+/* */
 

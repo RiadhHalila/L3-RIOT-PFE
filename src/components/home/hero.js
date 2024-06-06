@@ -4,39 +4,54 @@ import { Carousel } from 'antd';
 const items = [
   {
     key: '1',
-    title: 'Web and mobile payment built for developers',
-    content: 'Our innovative web and mobile payment solutions make transactions fast, secure, and effortless for both you and your customers. Say goodbye to the hassle of traditional payment methods and embrace the future of seamless payments.',
+    title: "l'Iot en Action",
+    content: "Dans un monde connecté, l'IoT émerge comme catalyseur majeur de transformation. Des dispositifs intelligents, dotés de capteurs sophistiqués, communiquent pour améliorer la qualité de vie. De la gestion énergétique à la santé, l'IoT ouvre des possibilités d'innovation. ",
   },
   {
     key: '2',
-    title: 'Work better together. Schedule meetings',
-    content: "Collaborate and achieve your goals as a team. Join forces, share ideas and leverage each others strengths to reach new heights together. Let's work together and create a brighter future for us all.",
+    title: "Robotique Révolutionnaire",
+    content: "La robotique transforme notre monde avec des machines autonomes et intelligentes. De l'industrie manufacturière à l'exploration spatiale, ces robots innovants améliorent l'efficacité et ouvrent de nouvelles possibilités technologiques",
   },
   {
     key: '3',
-    title: 'The best app to increase your productivity',
-    content: 'Boost your productivity and streamline your workday with our cutting-edge app. Stay organized, prioritize tasks, and never miss a deadline. Get more done in less time and achieve your goals faster than ever before.',
-
+    title: "Fusion Futuriste : IoT et Robotique",
+    content: "Lorsque l'IoT rencontre la robotique, une nouvelle ère d'efficacité émerge. Des environnements intelligents à la production automatisée, cette fusion crée des systèmes adaptatifs. En exploitant les données pour informer les actions des robots, cette synergie redéfinit les normes de performance.",
   },
-]
+];
 
-function AppHero() {
-  return (
-    <div id="hero" className="heroBlock">
-      <Carousel>
-        {items.map(item => {
-          return (
-            <div key={item.key} className="container-fluid">
-              <div className="content">
-                <h3>{item.title}</h3>
-                <p>{item.content}</p>
-              </div>
-            </div>  
-          );
-        })}
-      </Carousel>
-    </div>
-  );
+class AppHero extends React.Component {
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.next();
+    }, 5000); // Changement toutes les 6 secondes
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  next() {
+    this.carousel.next();
+  }
+
+  render() {
+    return (
+      <div id="hero" className="heroBlock">
+        <Carousel ref={el => (this.carousel = el)}>
+          {items.map(item => {
+            return (
+              <div key={item.key} className="container-fluid">
+                <div className="content">
+                  <h3 style={{ fontSize: '2em' }}>{item.title}</h3>
+                  <p>{item.content}</p>
+                </div>
+              </div>  
+            );
+          })}
+        </Carousel>
+      </div>
+    );
+  }
 }
 
 export default AppHero;

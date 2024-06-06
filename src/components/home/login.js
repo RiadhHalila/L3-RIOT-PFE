@@ -187,13 +187,11 @@ function AppLogin({ loggedIn, onLogin }) {
                 />
               </div>
             </div>
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Button type="primary" style={{ width: '150px', marginBottom: '16px' }}>Mode Manuel</Button>
-              <Button type="primary" style={{ width: '150px', marginBottom: '16px' }}>Mode Automatique</Button>
+        {/*  <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
               <Button type="primary" onClick={toggleCamera} style={{ width: '150px' }}>
                 {cameraOn ? 'Désactiver Caméra' : 'Activer Caméra'}
               </Button>
-            </div>
+      </div>  a voir avec jamel*/ } 
           </div>
           <div className="video-container" style={{ flex: '3', height: '100%', border: '1px solid #ccc', padding: '16px', marginLeft: '16px' }}>
   <h1 style={{ textAlign: 'center', fontSize: '1.5em' }}>Diffusion en direct</h1>
